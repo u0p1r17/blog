@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <h1>Crée votre article</h1>
+{% endblock %}
+
+{% block content %}
+    <h1>Crée votre article</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-submit" type="submit" value="Crée">
+    </form>
+{% endblock %}
